@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>P2W App - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2>P2W App</h2>
+        <button class="logout-btn">Logout</button>
+    </div>
+
+    
+    <div class="main-wrapper">
+        <div class="card">
+
+            <div class="card-header">
+                <h3>Active & Past Permits</h3>
+                <a href="create-permit.html" class="primary-btn">
+                    + Create New Permit
+                </a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Job Description</th>
+                        <th>Location</th>
+                        <th>Permit Type</th>
+                        <th>Assigned</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Welding Work</td>
+                        <td>Plant A</td>
+                        <td>Hot Work</td>
+                        <td>Priya</td>
+                        <td class="status-active">Active</td>
+                        <td>14-02-2026</td>
+                    </tr>
+
+                    <tr>
+                        <td>Electrical Repair</td>
+                        <td>Plant B</td>
+                        <td>Cold Work</td>
+                        <td>Saniya</td>
+                        <td class="status-closed">Closed</td>
+                        <td>12-02-2026</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup Page</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1F1C2C, #928DAB);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    body::before {
+      content: 'WELDER SIGNUP';
+      position: fixed;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 120px;
+      font-weight: bold;
+      color: rgba(135, 206, 250, 0.15);
+      text-shadow: 0 0 30px rgba(135, 206, 250, 0.2);
+      z-index: 0;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .signup-box {
+      background: #2C2A3A;
+      padding: 30px;
+      width: 350px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 10;
+    }
+
+    .signup-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #FFFFFF;
+    }
+
+    .signup-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      background: #3B3950;
+      color: #FFFFFF;
+      border: 1px solid #3B3950;
+      border-radius: 4px;
+    }
+
+    .signup-box input::placeholder {
+      color: #FFFFFF;
+    }
+
+    .signup-box button {
+      width: 100%;
+      padding: 10px;
+      background: #6C5CE7;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .signup-box button:hover {
+      background: #5A4BD6;
+    }
+
+    .signup-box p {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #FFFFFF;
+    }
+
+    .signup-box a {
+      color: #8B7BFF;
+      text-decoration: none;
+    }
+
+    .background-text {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 120px;
+      font-weight: bold;
+      color: rgba(135, 206, 250, 0.15);
+      text-shadow: 0 0 30px rgba(135, 206, 250, 0.2);
+      z-index: 0;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="signup-box">
+    <h2>Sign Up</h2>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+    <button onclick="signup()">Create Account</button>
+
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+
+  <script>
+    function signup() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (name === "" || email === "" || password === "" || confirmPassword === "") {
+        alert("Please fill all fields");
+        return;
+      }
+
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters");
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        return;
+      }
+
+      alert("Account created successfully (frontend only)");
+    }
+  </script>
+
+</body>
+</html>
